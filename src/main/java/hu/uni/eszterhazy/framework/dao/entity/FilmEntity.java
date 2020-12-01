@@ -15,6 +15,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Table(name = "film", schema = "sakila")
 public class FilmEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "film_id")
