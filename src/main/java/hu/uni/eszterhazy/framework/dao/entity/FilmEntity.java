@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Set;
 
 @Entity
 @Data
@@ -26,10 +27,8 @@ public class FilmEntity {
     private String description;
     @Column
     private int year;
-    @Column
-    private int language_id;
-    @Column
-    private int original_language_id;
+    //@Column
+    //private int original_language_id;
     @Column
     private int rental_duration;
     @Column
@@ -44,4 +43,15 @@ public class FilmEntity {
     // private int special_features; set need to implement with better understanding
     @Column
     private Timestamp last_update;
+
+    @ManyToOne
+    @JoinColumn(name = "language_id")
+    private LanguageEntity language;
+
+    @ManyToMany
+    private Set<CategoryEntity> category;
+
+    @ManyToMany
+    private Set<ActorEntity> actor;
+
 }

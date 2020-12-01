@@ -2,6 +2,7 @@ package hu.uni.eszterhazy.framework;
 
 import hu.uni.eszterhazy.framework.dao.FilmDao;
 import hu.uni.eszterhazy.framework.dao.FilmRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import java.util.stream.StreamSupport;
 @SpringBootApplication
 public class App implements CommandLineRunner
 {
+    @Autowired
     private ApplicationContext context;
 
     public static void main( String[] args )

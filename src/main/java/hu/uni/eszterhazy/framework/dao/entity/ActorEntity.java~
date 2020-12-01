@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Set;
 
 @Entity
 @Data
@@ -27,6 +26,4 @@ public class ActorEntity {
    private String last_name;
    @Column
    private Timestamp last_update;
-   @ManyToMany
-   private Set<FilmEntity> film;
 }
