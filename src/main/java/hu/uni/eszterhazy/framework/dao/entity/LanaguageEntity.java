@@ -5,8 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Data
@@ -15,5 +15,12 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @Table(name = "language", schema = "sakila")
 public class LanaguageEntity {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "language_id")
+    private int id;
+    @Column
+    private String name;
+    @Column
+    private Timestamp last_update;
 }
