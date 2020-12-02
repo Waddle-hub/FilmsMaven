@@ -1,7 +1,8 @@
 package hu.uni.eszterhazy.framework.dao.entity;
 
-import hu.uni.eszterhazy.framework.dao.entity.enumHelp.Rating;
-import hu.uni.eszterhazy.framework.dao.entity.enumHelp.RatingConverter;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.Rating;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.RatingConverter;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeaturesConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -39,13 +40,13 @@ public class FilmEntity {
     private int length;
     @Column
     private double replacement_cost;
+    @Column
+    private Timestamp last_update;
 
     @Convert(converter = RatingConverter.class)
     private Rating rating;
-    //@Column
-    // private int special_features; set need to implement with better understanding
-    @Column
-    private Timestamp last_update;
+    @Convert(converter = SpecialFeaturesConverter.class)
+    private int special_features;
 
     @ManyToOne
     @JoinColumn(name = "language_id")

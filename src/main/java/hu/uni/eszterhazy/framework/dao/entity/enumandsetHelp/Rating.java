@@ -1,4 +1,4 @@
-package hu.uni.eszterhazy.framework.dao.entity.enumHelp;
+package hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
