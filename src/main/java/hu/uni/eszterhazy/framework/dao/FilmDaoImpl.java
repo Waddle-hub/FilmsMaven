@@ -11,11 +11,11 @@ public class FilmDaoImpl implements FilmDao {
 
     private final FilmRepository filmRepository;
 
-    @Override
-    public void printFilms() {
-        System.out.println("Repository" + filmRepository);
-        StreamSupport.stream(filmRepository.findAll().spliterator(), false).forEach((filmEntity -> {
-            System.out.println(filmEntity);
-        }));
-    }
+   //@Override
+   //public void printFilms() {
+   //    System.out.println("Repository" + filmRepository);
+   //    StreamSupport.stream(filmRepository.findAll().spliterator(), false).forEach((filmEntity -> {
+   //        System.out.println(filmEntity);
+   //    }));
+   //}
 }

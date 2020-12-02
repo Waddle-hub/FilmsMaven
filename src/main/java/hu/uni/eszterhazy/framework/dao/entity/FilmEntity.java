@@ -1,5 +1,7 @@
 package hu.uni.eszterhazy.framework.dao.entity;
 
+import hu.uni.eszterhazy.framework.dao.entity.enumHelp.Rating;
+import hu.uni.eszterhazy.framework.dao.entity.enumHelp.RatingConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -37,8 +39,9 @@ public class FilmEntity {
     private int length;
     @Column
     private double replacement_cost;
-    //@Column
-    // private int rating; enum need to implement with better understanding
+
+    @Convert(converter = RatingConverter.class)
+    private Rating rating;
     //@Column
     // private int special_features; set need to implement with better understanding
     @Column
@@ -49,9 +52,17 @@ public class FilmEntity {
     private LanguageEntity language;
 
     @ManyToMany
+    @JoinTable(
+            name = "film_category",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<CategoryEntity> category;
 
     @ManyToMany
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id"))
     private Set<ActorEntity> actor;
 
 }

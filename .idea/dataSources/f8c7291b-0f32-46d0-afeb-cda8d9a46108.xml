@@ -4732,90 +4732,110 @@ SELECT|sys.sys_config:null
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <index id="1136" parent="366" name="idx_fk_film_id">
+    <column id="1136" parent="366" name="FilmEntity_film_id">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1137" parent="366" name="actor_actor_id">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="1138" parent="366" name="idx_fk_film_id">
       <ColNames>film_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1137" parent="366" name="PRIMARY">
+    <key id="1139" parent="366" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>actor_id
 film_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="1138" parent="366" name="fk_film_actor_actor">
+    <foreign-key id="1140" parent="366" name="fk_film_actor_actor">
       <ColNames>actor_id</ColNames>
       <RefTableName>actor</RefTableName>
       <RefColNames>actor_id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="1139" parent="366" name="fk_film_actor_film">
+    <foreign-key id="1141" parent="366" name="fk_film_actor_film">
       <ColNames>film_id</ColNames>
       <RefTableName>film</RefTableName>
       <RefColNames>film_id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="1140" parent="367" name="film_id">
+    <column id="1142" parent="367" name="film_id">
       <Position>1</Position>
       <DataType>smallint unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1141" parent="367" name="category_id">
+    <column id="1143" parent="367" name="category_id">
       <Position>2</Position>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1142" parent="367" name="last_update">
+    <column id="1144" parent="367" name="last_update">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <index id="1143" parent="367" name="fk_film_category_category">
+    <column id="1145" parent="367" name="FilmEntity_film_id">
+      <Position>4</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="1146" parent="367" name="category_category_id">
+      <Position>5</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="1147" parent="367" name="fk_film_category_category">
       <ColNames>category_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1144" parent="367" name="PRIMARY">
+    <key id="1148" parent="367" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>film_id
 category_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="1145" parent="367" name="fk_film_category_film">
+    <foreign-key id="1149" parent="367" name="fk_film_category_film">
       <ColNames>film_id</ColNames>
       <RefTableName>film</RefTableName>
       <RefColNames>film_id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="1146" parent="367" name="fk_film_category_category">
+    <foreign-key id="1150" parent="367" name="fk_film_category_category">
       <ColNames>category_id</ColNames>
       <RefTableName>category</RefTableName>
       <RefColNames>category_id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="1147" parent="368" name="next_val">
+    <column id="1151" parent="368" name="next_val">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
     </column>
-    <column id="1148" parent="369" name="language_id">
+    <column id="1152" parent="369" name="language_id">
       <Position>1</Position>
       <DataType>tinyint unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1149" parent="369" name="name">
+    <column id="1153" parent="369" name="name">
       <Position>2</Position>
       <DataType>char(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1150" parent="369" name="last_update">
+    <column id="1154" parent="369" name="last_update">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <key id="1151" parent="369" name="PRIMARY">
+    <key id="1155" parent="369" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>language_id</ColNames>
       <Primary>1</Primary>
