@@ -30,7 +30,7 @@ public class App implements CommandLineRunner
         System.out.println("Hello world");
 
         FilmDao dao = context.getBean(FilmDao.class);
-        dao.printFilms();
+        dao.readAll().forEach(System.out::println);
 
     }
 }

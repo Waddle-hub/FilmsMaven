@@ -29,6 +29,8 @@ public class FilmEntity {
     @Column
     private String description;
     @Column
+    private int release_year;
+    @Column
     private int year;
     //@Column
     //private int original_language_id;
