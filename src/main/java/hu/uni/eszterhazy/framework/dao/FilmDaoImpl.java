@@ -50,7 +50,6 @@ public class FilmDaoImpl implements FilmDao {
 
     private Timestamp getCurrentTime(){
         return new Timestamp((new Date()).getTime());
-
     }
 
     @Override

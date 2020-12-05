@@ -7,4 +7,5 @@ import java.util.Collection;
 
 public interface ActorDao {
     Collection<Actor> readAll();
+    void createActor(Actor actor);
 }

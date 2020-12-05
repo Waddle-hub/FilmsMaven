@@ -1,10 +1,14 @@
 package hu.uni.eszterhazy.framework;
 
+import hu.uni.eszterhazy.framework.dao.ActorDao;
+import hu.uni.eszterhazy.framework.dao.CategoryDao;
 import hu.uni.eszterhazy.framework.dao.FilmDao;
+import hu.uni.eszterhazy.framework.dao.LanguageDao;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.Rating;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeatures;
 import hu.uni.eszterhazy.framework.dao.repositories.FilmRepository;
 import hu.uni.eszterhazy.framework.model.Film;
+import hu.uni.eszterhazy.framework.model.Language;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -30,12 +34,20 @@ public class App implements CommandLineRunner
     public void run(String... args) throws Exception {
         System.out.println("Hello world");
 
-        FilmDao dao = context.getBean(FilmDao.class);
-        dao.readAll().forEach(System.out::println);
+        FilmDao filmDao = context.getBean(FilmDao.class);
+        ActorDao actorDao = context.getBean(ActorDao.class);
+        CategoryDao categoryDao = context.getBean(CategoryDao.class);
+        LanguageDao languageDao = context.getBean(LanguageDao.class);
+
+
+        //actorDao.readAll().forEach(System.out::println);
+        //categoryDao.readAll().forEach(System.out::println);
+        //filmDao.readAll().forEach(System.out::println);
+        //languageDao.readAll().forEach(System.out::println);
 
        // context.getBean(FilmRepository.class).findAll().stream().forEach(System.out::println);
 
-       // dao.createFilm(new Film(
+       // filmDao.createFilm(new Film(
        //         "Wades grand adventure",
        //         "The adventure of a young programmer named wade who goes on an adventure",
        //         1999,
