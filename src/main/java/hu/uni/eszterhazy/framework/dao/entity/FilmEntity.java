@@ -22,7 +22,7 @@ import java.util.Set;
 public class FilmEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "film_id")
     private int id;
     @Column
@@ -54,6 +54,7 @@ public class FilmEntity {
     @JoinColumn(name = "language_id")
     private LanguageEntity language;
 
+    //@ManyToMany(fetch = fetchtype.eager) ? perhaps
     @ManyToMany
     @JoinTable(
             name = "film_category",

@@ -55,7 +55,6 @@ public class FilmDaoImpl implements FilmDao {
 
     @Override
     public void createFilm(Film film) {
-        LanguageEntity language = languageRepository.findByName(film.getLanguage()).get();
         filmRepository.save(FilmEntity.builder()
                 .title(film.getTitle())
                 .description(film.getDescription())
