@@ -1,5 +1,6 @@
 package hu.uni.eszterhazy.framework.dao;
 
+import hu.uni.eszterhazy.framework.dao.entity.LanguageEntity;
 import hu.uni.eszterhazy.framework.dao.repositories.LanguageRepository;
 import hu.uni.eszterhazy.framework.model.Language;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +33,9 @@ public class LanguageDaoImpl implements LanguageDao{
 
     @Override
     public void createLanguage(Language language) {
-        
+        languageRepository.save(LanguageEntity.builder()
+                .name(language.getName())
+                .last_update(getCurrentTime())
+                .build());
     }
 }

@@ -7,6 +7,8 @@ import hu.uni.eszterhazy.framework.dao.LanguageDao;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.Rating;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeatures;
 import hu.uni.eszterhazy.framework.dao.repositories.FilmRepository;
+import hu.uni.eszterhazy.framework.model.Actor;
+import hu.uni.eszterhazy.framework.model.Category;
 import hu.uni.eszterhazy.framework.model.Film;
 import hu.uni.eszterhazy.framework.model.Language;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +60,19 @@ public class App implements CommandLineRunner
        //         10.55,
        //         Rating.R,
        //         SpecialFeatures.TRAILERS
+       // ));
+
+       // languageDao.createLanguage(new Language(
+       //         "Afrikaans"
+       // ));
+
+       // actorDao.createActor(new Actor(
+       //         "Wade",
+       //         "Friedrichs"
+       //         ));
+
+       // categoryDao.createCategory(new Category(
+       //         "Anime"
        // ));
 
     }

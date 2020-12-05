@@ -1,5 +1,6 @@
 package hu.uni.eszterhazy.framework.dao;
 
+import hu.uni.eszterhazy.framework.dao.entity.CategoryEntity;
 import hu.uni.eszterhazy.framework.dao.repositories.CategoryRepository;
 import hu.uni.eszterhazy.framework.model.Category;
 import lombok.RequiredArgsConstructor;
@@ -32,6 +33,9 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public void createCategory(Category category) {
-
+        categoryRepository.save(CategoryEntity.builder()
+                .name(category.getName())
+                .last_update(getCurrentTime())
+                .build());
     }
 }
