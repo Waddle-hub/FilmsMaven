@@ -6,4 +6,5 @@ import java.util.Collection;
 
 public interface CategoryDao {
     Collection<Category> readAll();
+    void createCategory(Category category);
 }

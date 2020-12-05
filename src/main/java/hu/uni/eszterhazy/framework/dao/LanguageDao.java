@@ -6,4 +6,5 @@ import java.util.Collection;
 
 public interface LanguageDao {
     Collection<Language> readAll();
+    void createLanguage(Language language);
 }

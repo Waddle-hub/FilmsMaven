@@ -29,4 +29,9 @@ public class LanguageDaoImpl implements LanguageDao{
                 languageEntity.getName()
         ))).collect(Collectors.toList());
     }
+
+    @Override
+    public void createLanguage(Language language) {
+        
+    }
 }

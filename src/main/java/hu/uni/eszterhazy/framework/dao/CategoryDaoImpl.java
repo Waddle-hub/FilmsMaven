@@ -29,4 +29,9 @@ public class CategoryDaoImpl implements CategoryDao {
                 categoryEntity.getName()
         ))).collect(Collectors.toList());
     }
+
+    @Override
+    public void createCategory(Category category) {
+
+    }
 }
