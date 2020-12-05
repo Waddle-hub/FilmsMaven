@@ -27,6 +27,7 @@ public class ActorEntity {
    private String last_name;
    @Column
    private Timestamp last_update;
+
    @ManyToMany(mappedBy = "actor")
    private Set<FilmEntity> film;
 }
