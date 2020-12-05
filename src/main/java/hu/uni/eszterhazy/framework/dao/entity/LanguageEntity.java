@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 @Table(name = "language", schema = "sakila")
 public class LanguageEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "language_id")
     private int id;
     @Column

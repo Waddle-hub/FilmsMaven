@@ -6,4 +6,5 @@ import java.util.Collection;
 
 public interface FilmDao {
     Collection<Film> readAll();
+    void createFilm(Film film);
 }

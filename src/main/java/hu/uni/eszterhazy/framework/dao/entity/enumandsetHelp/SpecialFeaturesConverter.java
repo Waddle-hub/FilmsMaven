@@ -7,11 +7,13 @@ public class SpecialFeaturesConverter implements AttributeConverter<SpecialFeatu
 
     @Override
     public String convertToDatabaseColumn(final SpecialFeatures attribute) {
+
         return attribute.getSpecialFeatures();
     }
 
     @Override
     public SpecialFeatures convertToEntityAttribute(final String dbData) {
+
         return SpecialFeatures.fromString(dbData);
     }
 }

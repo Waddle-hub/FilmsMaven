@@ -2,6 +2,7 @@ package hu.uni.eszterhazy.framework.dao.entity;
 
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.Rating;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.RatingConverter;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeatures;
 import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeaturesConverter;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,8 +31,6 @@ public class FilmEntity {
     private String description;
     @Column
     private int release_year;
-    @Column
-    private int year;
     //@Column
     //private int original_language_id;
     @Column
@@ -47,8 +46,9 @@ public class FilmEntity {
 
     @Convert(converter = RatingConverter.class)
     private Rating rating;
+
     @Convert(converter = SpecialFeaturesConverter.class)
-    private int special_features;
+    private SpecialFeatures special_features;
 
     @ManyToOne
     @JoinColumn(name = "language_id")
