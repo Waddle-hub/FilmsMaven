@@ -40,4 +40,9 @@ public class ActorDaoImpl implements ActorDao {
                 .last_update(getCurrentTime())
                 .build());
     }
+
+  //  @Override
+  //  public void deleteActor(String first_name, String last_name) {
+  //      actorRepository.deleteByFirstNameAndLastName(first_name, last_name);
+  //  }
 }

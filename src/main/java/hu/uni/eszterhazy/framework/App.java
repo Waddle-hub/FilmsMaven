@@ -22,58 +22,58 @@ import org.springframework.context.ApplicationContext;
  *
  */
 @SpringBootApplication
-public class App implements CommandLineRunner
+public class App // implements CommandLineRunner
 {
-    @Autowired
-    private ApplicationContext context;
+   // @Autowired
+   // private ApplicationContext context;
 
     public static void main( String[] args )
     {
         SpringApplication.run(App.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        System.out.println("Hello world");
-
-        FilmDao filmDao = context.getBean(FilmDao.class);
-        ActorDao actorDao = context.getBean(ActorDao.class);
-        CategoryDao categoryDao = context.getBean(CategoryDao.class);
-        LanguageDao languageDao = context.getBean(LanguageDao.class);
-
-
-        //actorDao.readAll().forEach(System.out::println);
-        //categoryDao.readAll().forEach(System.out::println);
-        //filmDao.readAll().forEach(System.out::println);
-        //languageDao.readAll().forEach(System.out::println);
-
-       // context.getBean(FilmRepository.class).findAll().stream().forEach(System.out::println);
-
-       // filmDao.createFilm(new Film(
-       //         "Wades grand adventure",
-       //         "The adventure of a young programmer named wade who goes on an adventure",
-       //         1999,
-       //         "Hungarian",
-       //         10,
-       //         5.66,
-       //         120,
-       //         10.55,
-       //         Rating.R,
-       //         SpecialFeatures.TRAILERS
-       // ));
-
-       // languageDao.createLanguage(new Language(
-       //         "Afrikaans"
-       // ));
-
-       // actorDao.createActor(new Actor(
-       //         "Wade",
-       //         "Friedrichs"
-       //         ));
-
-       // categoryDao.createCategory(new Category(
-       //         "Anime"
-       // ));
-
-    }
+   // @Override
+   // public void run(String... args) throws Exception {
+   //     System.out.println("Hello world");
+//
+   //     FilmDao filmDao = context.getBean(FilmDao.class);
+   //     ActorDao actorDao = context.getBean(ActorDao.class);
+   //     CategoryDao categoryDao = context.getBean(CategoryDao.class);
+   //     LanguageDao languageDao = context.getBean(LanguageDao.class);
+//
+//
+   //     //actorDao.readAll().forEach(System.out::println);
+   //     //categoryDao.readAll().forEach(System.out::println);
+   //     filmDao.readAll().forEach(System.out::println);
+   //     //languageDao.readAll().forEach(System.out::println);
+//
+   //    // context.getBean(FilmRepository.class).findAll().stream().forEach(System.out::println);
+//
+   //    // filmDao.createFilm(new Film(
+   //    //         "Wades grand adventure",
+   //    //         "The adventure of a young programmer named wade who goes on an adventure",
+   //    //         1999,
+   //    //         "Hungarian",
+   //    //         10,
+   //    //         5.66,
+   //    //         120,
+   //    //         10.55,
+   //    //         Rating.R,
+   //    //         SpecialFeatures.TRAILERS
+   //    // ));
+//
+   //    // languageDao.createLanguage(new Language(
+   //    //         "Afrikaans"
+   //    // ));
+//
+   //    // actorDao.createActor(new Actor(
+   //    //         "Wade",
+   //    //         "Friedrichs"
+   //    //         ));
+//
+   //    // categoryDao.createCategory(new Category(
+   //    //         "Anime"
+   //    // ));
+//
+   // }
 }

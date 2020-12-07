@@ -8,4 +8,8 @@ import java.util.Optional;
 public interface LanguageRepository extends JpaRepository<LanguageEntity, Integer> {
 
     Optional<LanguageEntity> findByName(String name);
+
+    int deleteByName(String name);
+
+
 }

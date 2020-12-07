@@ -2,6 +2,8 @@ package hu.uni.eszterhazy.framework.dao;
 
 import hu.uni.eszterhazy.framework.dao.entity.FilmEntity;
 import hu.uni.eszterhazy.framework.dao.entity.LanguageEntity;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.Rating;
+import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeatures;
 import hu.uni.eszterhazy.framework.dao.repositories.FilmRepository;
 import hu.uni.eszterhazy.framework.dao.repositories.LanguageRepository;
 import hu.uni.eszterhazy.framework.model.Film;
@@ -35,8 +37,8 @@ public class FilmDaoImpl implements FilmDao {
                     filmEntity.getRental_rate(),
                     filmEntity.getLength(),
                     filmEntity.getReplacement_cost(),
-                    filmEntity.getRating(),
-                    filmEntity.getSpecial_features()
+                    filmEntity.getRating().toString(),
+                    filmEntity.getSpecial_features().toString()
         ))).collect(Collectors.toList());
     }
 
@@ -63,8 +65,8 @@ public class FilmDaoImpl implements FilmDao {
                 .rental_rate(film.getRental_rate())
                 .length(film.getLength())
                 .replacement_cost(film.getReplacement_cost())
-                .rating(film.getRating())
-                .special_features(film.getSpecial_features())
+                .rating(Rating.valueOf(film.getRating()))
+                .special_features(SpecialFeatures.valueOf(film.getSpecial_features()))
                 .last_update(getCurrentTime())
                 .build());
     }

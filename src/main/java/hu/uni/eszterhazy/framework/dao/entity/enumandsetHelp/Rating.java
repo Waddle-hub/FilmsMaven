@@ -27,4 +27,17 @@ public enum Rating {
     public static Rating fromString(final String rating) {
         return Mapping.get(rating);
     }
+
+
+    @Override
+    public String toString() {
+        switch(this){
+            case G: return "G";
+            case PG: return "PG";
+            case R: return "R";
+            case NC17: return "NC-17";
+            case PG13: return "PG-13";
+            default: throw new IllegalArgumentException();
+        }
+    }
 }

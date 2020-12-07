@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -54,7 +55,6 @@ public class FilmEntity {
     @JoinColumn(name = "language_id")
     private LanguageEntity language;
 
-    //@ManyToMany(fetch = fetchtype.eager) ? perhaps
     @ManyToMany
     @JoinTable(
             name = "film_category",
@@ -67,6 +67,6 @@ public class FilmEntity {
             name = "film_actor",
             joinColumns = @JoinColumn(name = "film_id"),
             inverseJoinColumns = @JoinColumn(name = "actor_id"))
-    private Set<ActorEntity> actor;
+    private Set<ActorEntity> actor = new HashSet<>();
 
 }

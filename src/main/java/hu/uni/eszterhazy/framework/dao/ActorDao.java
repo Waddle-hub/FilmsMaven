@@ -8,4 +8,5 @@ import java.util.Collection;
 public interface ActorDao {
     Collection<Actor> readAll();
     void createActor(Actor actor);
+    //void deleteActor(String first_name, String last_name);
 }

@@ -38,4 +38,9 @@ public class CategoryDaoImpl implements CategoryDao {
                 .last_update(getCurrentTime())
                 .build());
     }
+
+    @Override
+    public void deleteCategory(String name) {
+        categoryRepository.deleteByName(name);
+    }
 }

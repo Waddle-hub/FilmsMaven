@@ -38,4 +38,11 @@ public class LanguageDaoImpl implements LanguageDao{
                 .last_update(getCurrentTime())
                 .build());
     }
+
+    @Override
+    public void deleteLanguagebyName(String name) {
+        languageRepository.deleteByName(name);
+    }
+
+
 }

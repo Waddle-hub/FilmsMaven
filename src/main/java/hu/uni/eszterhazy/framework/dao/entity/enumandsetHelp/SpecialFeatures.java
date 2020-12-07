@@ -34,4 +34,15 @@ public enum SpecialFeatures {
     public static SpecialFeatures fromString(final String specialFeatures) {
         return Mapping.get(specialFeatures);
     }
+
+    @Override
+    public String toString() {
+        switch(this){
+            case TRAILERS: return "Trailers";
+            case COMMENTARIES: return "Commentaries";
+            case DELETEDSCENES: return "Deleted Scenes";
+            case BEHINDTHESCENES: return "Behind the Scenes";
+            default: throw new IllegalArgumentException();
+        }
+    }
 }

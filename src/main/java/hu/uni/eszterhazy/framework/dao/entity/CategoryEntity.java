@@ -23,8 +23,10 @@ public class CategoryEntity {
     private int id;
     @Column
     private String name;
+
     @ManyToMany(mappedBy = "category")
     private Set<FilmEntity> film;
+
     @Column
     private Timestamp last_update;
 

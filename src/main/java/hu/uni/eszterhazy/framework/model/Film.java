@@ -5,6 +5,9 @@ import hu.uni.eszterhazy.framework.dao.entity.enumandsetHelp.SpecialFeatures;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
+import org.hibernate.internal.util.StringHelper;
+
+import java.util.Set;
 
 @AllArgsConstructor
 @ToString
@@ -19,7 +22,6 @@ public class Film {
     private double rental_rate;
     private int length;
     private double replacement_cost;
-    private Rating rating;
-    private SpecialFeatures special_features;
-
+    private String rating;
+    private String special_features;
 }
